@@ -11,26 +11,26 @@ import io.cucumber.java.en.*;
 
 
 public class GoogleSearchSteps {
-	
+
 	WebDriver driver = null;
-	
+
 	@Given("Browser is open")
 	public void browser_is_open() {
 		System.out.println("Inside Step - Browser is open");
-		
+
 		//how to set a relative path. 
 		String  projectPath = System.getProperty("user.dir"); // this will get the  location of the project path
 		System.out.println("Project path is: " + projectPath);
 		//so the path of the chrome driver starts from src/test/resources. so delete the preceeding path
 		//provide the path for the chromedriver.exe. change to forward slash. replace the backslash
 		System.setProperty("webdriver.chrome.driver",projectPath+  "/src/test/resources/drivers/chromedriver.exe");
-	driver = new ChromeDriver();
-	driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS); // implicit wait for 30 seconds
-	driver.manage().timeouts().pageLoadTimeout(40,TimeUnit.SECONDS); // wait for the page to load or time it out
-	driver.manage().window().maximize();// to run in full screen
-	
+		driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS); // implicit wait for 30 seconds
+		driver.manage().timeouts().pageLoadTimeout(40,TimeUnit.SECONDS); // wait for the page to load or time it out
+		driver.manage().window().maximize();// to run in full screen
+
 	}
-	
+
 
 	@And("user is on google seach page")
 	public void user_is_on_google_seach_page() {
@@ -51,7 +51,7 @@ public class GoogleSearchSteps {
 		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
 		Thread.sleep(2000); // add some wait commands in milliseconds so this is 2 seconds;
 	}
-	
+
 
 	@Then("user is navigated to search results")
 	public void user_is_navigated_to_search_results() {
