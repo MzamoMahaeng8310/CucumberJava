@@ -1,6 +1,7 @@
 package StepsDefinition;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.cucumber.java.en.*;
 
@@ -15,6 +16,7 @@ public class SupersportSteps {
 		String projectpath = System.getProperty("user.dir");
 		System.out.println("The project path is : " + projectpath);
 		System.setProperty("webdriver.chrome.driver", projectpath + "/src/test/resources/drivers/chromedriver.exe");
+		driver = new ChromeDriver();
 		
 	}
 
