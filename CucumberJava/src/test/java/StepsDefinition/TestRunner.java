@@ -17,7 +17,7 @@ monochrome = true, //Formatted view
 //you can make provision for all 2 report formants, HTLM. JSON and JUniy XML
 plugin = {"pretty", "junit:target/JUnitReports/report.xml","json:target/JSONReports/report.json","html:target/HtmlReports"},
 //Create tags and execute the features associated with the tags
-tags = "@supersport"
+tags = "@Seleniumeasy"
 		
 		)
 
