@@ -6,7 +6,7 @@ Feature: feature to test google search functionality
     And user is on google seach page
     When use enters  text in the search box
     And hits enter
-    Then user is navigated to search results
+    Then user is naviga ted to search results
 
   @Seleniumeasy
   Scenario: Validate the selenium page
