@@ -69,6 +69,7 @@ public class TestExampleSteps {
 	@When("the Save button is clicked")
 	public void the_Save_button_is_clicked() {
 		System.out.println("Inside step : the Save button is clicked");
+		driver.findElement(By.id("save")).click();
 	}
 
 	@Then("the entry is saved")
