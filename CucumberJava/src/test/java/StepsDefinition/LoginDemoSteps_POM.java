@@ -13,7 +13,7 @@ public class LoginDemoSteps_POM {
 	@Given("browser is open")
 	public void browser_is_open() {
 
-		System.out.println("Im inside ======== LoginDemoSteps DEMO");
+		System.out.println("Im inside ======== LoginDemoSteps POM DEMO");
 		System.out.println("Inside Step - browser is open");
 
 		//how to set a relative path. 
