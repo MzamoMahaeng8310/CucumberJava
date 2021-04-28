@@ -10,11 +10,8 @@ Feature: Test login fuontionality
 
     #adding the data table
     Examples: 
-      | username     | password |
-      | ShadabKhan   |    12345 |
-      | Johny        |    12345 |
-      | Rupaul       |    12345 |
-      | SergioAguero |    12345 |
-
-      #this is where the video lesson is at
-      #https://youtu.be/BKefIqoUD3w?list=PLhW3qG5bs-L_mFHirOLEYJ7X2rIXu8SR2&t=1383
+      | username   | password |
+      | ShadabKhan |    12345 |
+    #  | Johny        |    12345 |
+    #  | Rupaul       |    12345 |
+    #  | SergioAguero |    12345 |
