@@ -14,4 +14,4 @@ Feature: Test Project Example  Page
     Examples: 
       #adding the input variable table
       | country  | address            | email               | phoneNumber |
-      | Cameroon | koos avenue durban | koos.piet.gmail.com |  0958668757 |
+      | Cameroon | koos avenue durban | koos.piet@gmail.com |  0958668757 |

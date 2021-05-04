@@ -8,9 +8,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import io.cucumber.java.en.*;
+import pages.TestProjectPOM;
+import pages.loginPage;
 
 public class TestExampleSteps {
 	WebDriver driver = null;
+	TestProjectPOM testProj;
 
 	@Given("The user is on the TestProject Example Page")
 	public void the_user_is_on_the_TestProject_Example_Page() {
@@ -44,37 +47,44 @@ public class TestExampleSteps {
 	@When("^The (.*) downdown value is selected$")
 	public void the_country_downdown_value_is_selected(String country) {
 		System.out.println("Inside step : The country downdown value is selected");
-		Select drpCountry = new Select(driver.findElement(By.id("country")));
-		drpCountry.selectByVisibleText(country);
+		testProj = new TestProjectPOM(driver);
+		testProj.selectCountry(country);
+		//Select drpCountry = new Select(driver.findElement(By.id("country")));
+		//drpCountry.selectByVisibleText(country);
 	}
 
 	@When("^The (.*) is entered$")
 	public void the_address_is_entered(String address) {
 		System.out.println("Inside Step : The address is entered ");
-		driver.findElement(By.id("address")).sendKeys(address);
+		testProj.enterAddress(address);
+		//driver.findElement(By.id("address")).sendKeys(address);
 	}
 
 	@When("^Enter the (.*) address$")
 	public void the_email_address_in_entered(String email) {
 		System.out.println("Inside Step : The email address in entered");
-		driver.findElement(By.id("email")).sendKeys(email);
+		testProj.enterEmail(email);
+		//driver.findElement(By.id("email")).sendKeys(email);
 	}
 
 	@When("^The user enters the (.*)$")
 	public void the_phoneNumber_is_entered(String phonenum) {
 		System.out.println("Inside Step : The phoneNumber is entered ");
-		driver.findElement(By.id("phone")).sendKeys(phonenum);
+		testProj.enterPhoneNumber(phonenum);
+		//driver.findElement(By.id("phone")).sendKeys(phonenum);
 	}
 
 	@When("the Save button is clicked")
 	public void the_Save_button_is_clicked() {
 		System.out.println("Inside step : the Save button is clicked");
-		driver.findElement(By.id("save")).click();
+		testProj.saveInputs();
+		//driver.findElement(By.id("save")).click();
 	}
 
 	@Then("the entry is saved")
 	public void the_entry_is_saved() {
 		System.out.println("Inside Step : the entry is saved");
+		driver.getPageSource().contains("Saved");
 	}
 
 
