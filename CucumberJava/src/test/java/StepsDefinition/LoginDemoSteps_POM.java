@@ -32,8 +32,6 @@ public class LoginDemoSteps_POM {
 	@And("user in on login page")
 	public void user_in_on_login_page() {
 		
-		
-		
 		driver.navigate().to("https://example.testproject.io/web/");
 
 	}

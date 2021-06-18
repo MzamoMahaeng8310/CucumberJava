@@ -18,8 +18,7 @@ monochrome = true, //Formatted view
 plugin = {"pretty", "junit:target/JUnitReports/report.xml","json:target/JSONReports/report.json","html:target/HtmlReports"},
 //Create tags and execute the features associated with the tags
 tags = "@TestProjectExamplePage"
-		
-		)
+)
 
 
 public class TestRunner {
