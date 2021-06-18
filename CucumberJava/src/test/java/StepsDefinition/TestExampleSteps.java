@@ -53,28 +53,28 @@ public class TestExampleSteps {
 		//drpCountry.selectByVisibleText(country);
 	}
 
-	@When("^The (.*) is entered$")
+	@And("^The (.*) is entered$")
 	public void the_address_is_entered(String address) {
 		System.out.println("Inside Step : The address is entered ");
 		testProj.enterAddress(address);
 		//driver.findElement(By.id("address")).sendKeys(address);
 	}
 
-	@When("^Enter the (.*) address$")
+	@And("^Enter the (.*) address$")
 	public void the_email_address_in_entered(String email) {
 		System.out.println("Inside Step : The email address in entered");
 		testProj.enterEmail(email);
 		//driver.findElement(By.id("email")).sendKeys(email);
 	}
 
-	@When("^The user enters the (.*)$")
+	@And("^The user enters the (.*)$")
 	public void the_phoneNumber_is_entered(String phonenum) {
 		System.out.println("Inside Step : The phoneNumber is entered ");
 		testProj.enterPhoneNumber(phonenum);
 		//driver.findElement(By.id("phone")).sendKeys(phonenum);
 	}
 
-	@When("the Save button is clicked")
+	@And("the Save button is clicked")
 	public void the_Save_button_is_clicked() {
 		System.out.println("Inside step : the Save button is clicked");
 		testProj.saveInputs();
