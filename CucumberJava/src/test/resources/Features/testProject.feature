@@ -7,7 +7,7 @@ Feature: Test Project Example  Page
     When The <country> downdown value is selected
     And The <address> is entered
     And Enter the <email> address
-    And The user enters the <phoneNumber> 
+    And The user enters the <phoneNumber>
     And the Save button is clicked
     Then the entry is saved
 

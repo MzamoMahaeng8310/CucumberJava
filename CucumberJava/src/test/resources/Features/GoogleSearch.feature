@@ -2,11 +2,11 @@ Feature: feature to test google search functionality
 
   @google
   Scenario: Validate google seach is working
-    Given Browser is open
+    Given browser is open
     And user is on google seach page
     When use enters  text in the search box
     And hits enter
-    Then user is naviga ted to search results
+    Then user is navigated to search results
 
   @Seleniumeasy
   Scenario: Validate the selenium page

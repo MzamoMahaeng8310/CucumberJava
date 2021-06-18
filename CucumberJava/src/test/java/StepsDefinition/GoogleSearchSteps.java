@@ -14,7 +14,7 @@ public class GoogleSearchSteps {
 
 	WebDriver driver = null;
 
-	@Given("Browser is open")
+	@Given("browser is open")
 	public void browser_is_open() {
 		System.out.println("Inside Step - Browser is open");
 
